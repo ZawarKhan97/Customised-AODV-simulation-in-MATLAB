@@ -1,13 +1,18 @@
-I'm a passionate engineer with a strong background in Biomedical Engineering and Electrical Engineering, holding Dual Master's degrees. Over the years, I've honed my skills in various areas, including:
+AODV Setup-MATLAB
+ -Mobility Support
+ -Limited Broadcast
+ -PDR and Throughput Calculation
+ 
+Initial Setup Phase
 
-Programming Languages: C++, Python, Embedded C
-Operating Systems: Linux (Debian)
-Simulation Tools: NS2, NS3, MATLAB
-GUI Development: C++
-Networking Protocols: ZigBee Protocol, 802.15, 802.11 ah, AODV, OLSR
-IoT Development: IoT Protocol development, Python/Linux Radio Applications
-Network Security: IoT Security, TCP/IP stack design
+Implementation of Customised AODV
+	Hello Packet Broadcast every 3 seconds.
+	Check if no other node is sending (MATLAB: Only Single node is selected to send)
+        We extract the routing table entries from the hello packet for the source node and assume the destination 	node has an empty routing table initially.
+	We iterate through each entry in the source routing table and compare it with entries in the destination 	node's routing table.
+	If a matching entry is found in the destination node's routing table, we compare hop counts and update the 	entry if necessary.
+	If no matching entry is found, we add a new entry to the destination node's routing table with a hop count of 	1 and the next hop set to the source node ID.
+	Finally, we update the hello packet's routing table entries with the updated destination routing table and 	display the updated hello packet.
 
-My GitHub repository is a showcase of my projects, contributions, and expertise in cutting-edge technologies. I'm particularly interested in IoT, IoT Security, network design, and simulation model refinement. I believe in continuous learning and collaboration, and I'm eager to connect with like-minded individuals and contribute to innovative projects.
-
-Let's connect and explore the possibilities together!
+Data Packet sent
+	
